@@ -626,11 +626,6 @@ video {
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
@@ -679,12 +674,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -701,100 +690,47 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.before\:absolute::before {
-  content: var(--tw-content);
+/*--------- Faq Active ------------*/
+
+div.active{
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow:  0 0 3px rgba(17, 12, 12, 0.5),
+    0 0 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(17, 12, 12, 0.5);
+}
+
+div button i.fa-times{
+  display: none;
+}
+
+div.active::before,
+div.active::after{
   position: absolute;
-}
-
- {
-  left: -1.75rem;
-  content: var(--tw-content);
-  top: -0.5rem;
-}
-
-.before\:z-0::before {
-  content: var(--tw-content);
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 100px;
   z-index: 0;
-}
-
-.before\:rotate-180::before {
-  content: var(--tw-content);
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.before\:font-awesome::before {
-  content: var(--tw-content);
-  font-family: Font Awesome Free;
-}
-
-.before\:text-9xl::before {
-  content: var(--tw-content);
-  font-size: 8rem;
-  line-height: 1;
-}
-
-.before\:text-blue-400::before {
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(96 165 250 / var(--tw-text-opacity));
-}
-
-.before\:opacity-20::before {
-  content: var(--tw-content);
+  top: 5px;
+  left: 10px;
   opacity: 0.2;
 }
 
-.before\:content-\[\'\\f075\'\]::before {
-  --tw-content: '\f075';
-  content: var(--tw-content);
+div.active::before{
+  transform: rotateY(180deg);
+  top: -40px;
+  left: -15px;
+  color: rgb(196, 65, 206);
 }
 
-.after\:absolute::after {
-  content: var(--tw-content);
-  position: absolute;
+div.active p,
+div.active button i.fa-times{
+  display: inline-block;
 }
 
-.after\:left-5::after {
-  content: var(--tw-content);
-  left: 1.25rem;
-}
-
-.after\:top-5::after {
-  content: var(--tw-content);
-  top: 1.25rem;
-}
-
-.after\:z-0::after {
-  content: var(--tw-content);
-  z-index: 0;
-}
-
-.after\:font-awesome::after {
-  content: var(--tw-content);
-  font-family: Font Awesome Free;
-}
-
-.after\:text-9xl::after {
-  content: var(--tw-content);
-  font-size: 8rem;
-  line-height: 1;
-}
-
-.after\:text-red-400::after {
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity));
-}
-
-.after\:opacity-20::after {
-  content: var(--tw-content);
-  opacity: 0.2;
-}
-
-.after\:content-\[\'\\f075\'\]::after {
-  --tw-content: '\f075';
-  content: var(--tw-content);
+div.active button i.fa-chevron-down{
+  display: none;
 }
 
 .active\:bg-slate-100:active {

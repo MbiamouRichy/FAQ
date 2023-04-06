@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/*--------- Faq Active ------------*/
+div.active{
+
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow:  0 0 3px rgba(17, 12, 12, 0.5),
+    0 0 3px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(17, 12, 12, 0.5);
+}
+div button i.fa-times{
+    display: none;
+}
+div.active::before,
+div.active::after{
+    position: absolute;
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 100px;
+    z-index: 0;
+    top: 5px;
+    left: 10px;
+    opacity: 0.2;
+}
+div.active::before{
+    transform: rotateY(180deg);
+    top: -40px;
+    left: -15px;
+    color: rgb(196, 65, 206);
+}
+
+div.active p,
+div.active button i.fa-times{
+    display: inline-block;
+}
+div.active button i.fa-chevron-down{
+    display: none;
+}

@@ -2,16 +2,14 @@
 module.exports = {
   content: ["./index.html"],
   theme: {
-    extend: { 
+    extend: {
       fontFamily: {
-      'sans': ['Mulish', 'sans-serif'],
-      'awesome': ['Font Awesome Free'],
+        sans: ["Mulish", "sans-serif"],
       },
       borderRadius: {
-        circle: ['50%']
-      }
-  }
+        circle: ["50%"],
+      },
+    },
   },
   plugins: [],
-}
-
+};
